@@ -163,5 +163,3 @@ Additional terms may be found in the complete [license agreement](./LICENSE.md).
 [back to the top](#top)
 
 * * *
-
-[back to repository README](../README.md)
