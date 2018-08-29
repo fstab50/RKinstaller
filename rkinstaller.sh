@@ -84,7 +84,8 @@ function help_menu(){
             values. Use --configure by itself to find out more detail
 
             o ${title}local${reset} - Configure a new local configuration file. Must
-                be used with --force option if local configuration file preexists:
+                be used with --force option if local configuration file
+                already exists:
 
                     $ ${bd}$pkg${bodytext} --configure ${by}local${bodytext}
 
