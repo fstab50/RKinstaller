@@ -7,7 +7,7 @@
 
 Utility for installing and configuring the latest version of [Rkhunter Malware Scanner](https://en.wikipedia.org/wiki/Rkhunter) for linux.
 
-Rkhunter Installer, version **1.7**
+Rkhunter Installer, Version **1.7.2**
 
 * * *
 
