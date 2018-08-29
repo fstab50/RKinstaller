@@ -64,7 +64,7 @@ function help_menu(){
 
   ${title}SYNOPSIS${bodytext}
 
-              $  sh ${title}$pkg${bodytext}   <${by}OPTION${reset}>
+          $  sh ${title}$pkg${bodytext}   --install   [ --layout {${by}/usr${reset} | ${by}/usr/bin${reset}} ]
 
                           -d | --download
                           -i | --install
@@ -89,8 +89,7 @@ function help_menu(){
 
                     $ ${bd}$pkg${bodytext} --configure ${by}local${bodytext}
 
-            o ${title}display${reset} - Display the local configuration file if it
-                exits:
+            o ${title}display${reset} - Display the local configuration file if exits:
 
                     $ ${bd}$pkg${bodytext} --configure ${by}display${bodytext}
 
@@ -106,6 +105,8 @@ function help_menu(){
             o ${title}unhide${reset} - Compile the unhide C Library dependency:
 
                     $ ${bd}$pkg${bodytext} --configure ${by}unhide${bodytext}
+
+        ${title}-d${reset},${title}--download${bodytext}:  Download all installation artificts, then exit.
 
         ${title}-f${reset},${title}--force${reset} (parameter):  Force an operation indicated by other com-
             mand switch parameters
