@@ -64,34 +64,37 @@ function help_menu(){
 
   ${title}SYNOPSIS${bodytext}
 
-          $  sh ${title}$pkg${bodytext}   <${by}OPTION${reset}>
+              $  sh ${title}$pkg${bodytext}   <${by}OPTION${reset}>
 
-
-              -d | --download     Download Rkhunter components only
-              -i | --install      Install Rkhunter (full)
-             [-c | --clean        Remove installation artifacts ]
-             [-C ] --configure    Print configuration options   ]
-             [-f | --force        Force (reinstall)             ]
-             [-h | --help         Print this menu               ]
-             [-l | --layout       Binary installation directory ]
-             [-q | --quiet        Supress all output to stdout  ]
-             [-r | --remove       Remove Rkhunter and components]
+                          -d | --download
+                          -i | --install
+                         [-c | --clean      ]
+                         [-C ] --configure  ]
+                         [-f | --force      ]
+                         [-h | --help       ]
+                         [-l | --layout     ]
+                         [-q | --quiet      ]
+                         [-r | --remove     ]
 
   ${title}OPTIONS${bodytext}
-        ${title}--configure${bodytext} <value>:  Configure must be used with one of the following
-        values. Use --configure by itself to find out more detail
+        ${title}-c${reset},${title}--clean${bodytext}:  Remove installation artifacts. Clean up automatically
+            executes after installation.
 
-            o ${title}local${reset} - Configure a new local configuration file. Must be used
-              with --force option if local configuration file already exists:
+        ${title}-C${reset},${title}--configure${bodytext} <value>:  Configure used with one of the following
+            values. Use --configure by itself to find out more detail
+
+            o ${title}local${reset} - Configure a new local configuration file. Must
+                be used with --force option if local configuration file preexists:
 
                     $ ${bd}$pkg${bodytext} --configure ${by}local${bodytext}
 
-            o ${title}display${reset} - Display the local configuration file if it exits:
+            o ${title}display${reset} - Display the local configuration file if it
+                exits:
 
                     $ ${bd}$pkg${bodytext} --configure ${by}display${bodytext}
 
-            o ${title}perl${reset} - Manually install missing Rkhunter perl module library
-              dependencies:
+            o ${title}perl${reset} - Manually install missing Rkhunter perl module
+                library dependencies:
 
                     $ ${bd}$pkg${bodytext} --configure ${by}perl${bodytext}
 
@@ -103,18 +106,20 @@ function help_menu(){
 
                     $ ${bd}$pkg${bodytext} --configure ${by}unhide${bodytext}
 
-        ${title}--force${bodytext} (parameter): Force an operation indicated by other com-
-        mand switches
+        ${title}-f${reset},${title}--force${reset} (parameter):  Force an operation indicated by other com-
+            mand switch parameters
 
-        ${title}--quiet${bodytext} (parameter): Supress all stdout output. For use in unat-
-        tended scripts or configuration management operations
-
-        ${title}--layout${bodytext} (parameter): Installation directory parameter used only
-        when installing rkhunter (--install). Example:
+        ${title}-l${reset},${title}--layout${reset} (parameter): Installation directory parameter used only
+            when installing rkhunter (--install). Example:
 
                 $ ${bd}$pkg${bodytext} --install ${by}--layout /usr${bodytext}
 
-        If omitted during installation, defaults to ${white}/usr/local/bin${bodytext}
+            If omitted during installation, defaults to ${white}/usr/local/bin${bodytext}
+
+        ${title}-q${reset},${title}--quiet${reset} (parameter): Supress all stdout output. For use in unat-
+            tended scripts or configuration management operations
+
+        ${title}-r${reset},${title}--remove${reset} (parameter): Remove Rkhunter and components
   _________________________________________________________________________
 
                 ${ul}Note${bodytext}: this installer must be run as root.
