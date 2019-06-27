@@ -2,7 +2,7 @@
 
 TMPDIR='/tmp'
 PROFILE='imagestore'
-BUCKET='images.awscloud.center'
+BUCKET='images.origin'
 KEY='RKinstaller'
 
 pkg_path=$(cd "$(dirname $0)"; pwd -P)
